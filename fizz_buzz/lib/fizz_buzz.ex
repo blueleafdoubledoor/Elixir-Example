@@ -16,6 +16,10 @@ defmodule FizzBuzz do
     :world
   end
 
+  @doc """
+  引数にとった数字を各条件でマッチングを図り、
+  マッチする条件の結果を返す
+  """
   def fizz_buzz(number) do
     cond do
       rem(number, 15) == 0 -> "Fizz Buzz!!"
@@ -25,6 +29,9 @@ defmodule FizzBuzz do
       end
   end
 
+  @doc """
+  エントリーポイントとなる main 関数
+  """
   def main(args) do
     IO.puts("Fizz Buzz Start!!")
     # コマンドライン引数を解析する
