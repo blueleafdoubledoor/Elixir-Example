@@ -20,5 +20,5 @@ erl_crash.dump
 *.ez
 
 # 実行ファイルは、コミット対象外とする
-fizz_buzz
+/fizz_buzz*
 
