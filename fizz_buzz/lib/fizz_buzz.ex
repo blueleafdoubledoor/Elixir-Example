@@ -33,14 +33,18 @@ defmodule FizzBuzz do
   エントリーポイントとなる main 関数
   """
   def main(args) do
-    IO.puts("Fizz Buzz Start!!")
     # コマンドライン引数を解析する
     {_, num_list, _} = args |> OptionParser.parse
-    # 番号だけ取り出してそれを一旦文字列に変換してから数値に変換する
+
+    # コマンドライン引数はリストと受け取るので、
+    # 一旦文字列に変換してから数値に変換する
     {last, _} =
       num_list
       |> List.to_string
       |> Integer.parse
+
+    # 引数に問題がなければ実行
+    IO.puts("Fizz Buzz Start!!")
     # 指定の番号まで実行する
     Enum.each(1..last, &(&1 |> fizz_buzz |> IO.puts))
   end
